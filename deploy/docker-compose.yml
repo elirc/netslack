@@ -1,0 +1,30 @@
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: deploy/dotnet-api.Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__NetSlack: Data Source=/data/netslack.db
+      Jwt__SigningKey: replace-this-development-key-with-secret-manager
+      Cors__AllowedOrigins__0: http://localhost:5173
+    ports:
+      - "5208:8080"
+    volumes:
+      - netslack-data:/data
+
+  client:
+    build:
+      context: ..
+      dockerfile: deploy/react-client.Dockerfile
+    environment:
+      VITE_API_BASE_URL: http://localhost:5208
+    ports:
+      - "5173:5173"
+    depends_on:
+      - api
+
+volumes:
+  netslack-data:
+

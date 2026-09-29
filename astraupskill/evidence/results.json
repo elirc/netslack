@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "executedTests": 5,
+  "checks": [
+    {
+      "project": "_Organized Desktop/01 Net Workspaces/.netslack",
+      "id": "7f289bf2abfa",
+      "command": [
+        "dotnet",
+        "run",
+        "--project",
+        "tests/NetSlack.ScopeHarness",
+        "--configuration",
+        "Release",
+        "--no-restore",
+        "-p:",
+        "UseSharedCompilation=false"
+      ],
+      "cwd": "C:\\Users\\Owner\\Desktop\\AstraOrganized2\\astra-remaining-improvements\\stage\\7f289bf2abfa",
+      "environmentOverrides": {},
+      "startedAt": "2026-09-22T00:41:12.600130+00:00",
+      "status": "complete",
+      "log": "crud-b02-astra-harness.log",
+      "pid": 15200,
+      "exitCode": 0,
+      "passed": true,
+      "finishedAt": "2026-09-22T00:43:26.712070+00:00",
+      "elapsedSeconds": 134.09
+    }
+  ],
+  "limits": [
+    "Native .NET8 test project and EF provider were not executed because only .NET10 is installed.",
+    "Harness contracts model persisted winner state but do not prove SQL translation, unique index creation, transaction isolation, or migration behavior.",
+    "No automatic retry or concurrent worker coordination is claimed.",
+    "If the recovery query fails or is cancelled, its failure propagates instead of the original save error.",
+    "Classification is based on observed slug occupancy, not proof of which database constraint caused the save failure; no automatic retry is performed."
+  ]
+}

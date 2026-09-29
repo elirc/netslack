@@ -1,0 +1,17 @@
+bin/
+obj/
+node_modules/
+dist/
+.vite/
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+*.db
+*.db-shm
+*.db-wal
+.env
+.env.*
+!.env.example
+

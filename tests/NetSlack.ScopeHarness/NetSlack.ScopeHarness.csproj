@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net10.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../src/NetSlack.Application/Workspaces/WorkspaceService.cs" Link="WorkspaceService.cs" />
+    <Compile Include="../../src/NetSlack.Application/Workspaces/WorkspaceDto.cs" Link="WorkspaceDto.cs" />
+    <Compile Include="../../src/NetSlack.Domain/**/*.cs" Exclude="../../src/NetSlack.Domain/bin/**;../../src/NetSlack.Domain/obj/**" LinkBase="Domain" />
+  </ItemGroup>
+</Project>

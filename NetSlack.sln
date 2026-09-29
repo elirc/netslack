@@ -1,0 +1,43 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSlack.Api", "src\NetSlack.Api\NetSlack.Api.csproj", "{C3C68414-6854-4B58-94AA-0B0E8FBAB701}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSlack.Application", "src\NetSlack.Application\NetSlack.Application.csproj", "{25AA6A10-7BF0-41E3-AFD4-6B6729D11A58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSlack.Domain", "src\NetSlack.Domain\NetSlack.Domain.csproj", "{E58CF497-FF5D-438B-9180-B51D5CF8204E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSlack.Infrastructure", "src\NetSlack.Infrastructure\NetSlack.Infrastructure.csproj", "{9F89E627-FD94-4BDD-8D09-8AC257F161C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSlack.Application.Tests", "tests\NetSlack.Application.Tests\NetSlack.Application.Tests.csproj", "{821F3499-D0B4-48A0-9ABF-3E1937FA5FA2}"
+EndProject
+Global
+  GlobalSection(SolutionConfigurationPlatforms) = preSolution
+    Debug|Any CPU = Debug|Any CPU
+    Release|Any CPU = Release|Any CPU
+  EndGlobalSection
+  GlobalSection(ProjectConfigurationPlatforms) = postSolution
+    {C3C68414-6854-4B58-94AA-0B0E8FBAB701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+    {C3C68414-6854-4B58-94AA-0B0E8FBAB701}.Debug|Any CPU.Build.0 = Debug|Any CPU
+    {C3C68414-6854-4B58-94AA-0B0E8FBAB701}.Release|Any CPU.ActiveCfg = Release|Any CPU
+    {C3C68414-6854-4B58-94AA-0B0E8FBAB701}.Release|Any CPU.Build.0 = Release|Any CPU
+    {25AA6A10-7BF0-41E3-AFD4-6B6729D11A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+    {25AA6A10-7BF0-41E3-AFD4-6B6729D11A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+    {25AA6A10-7BF0-41E3-AFD4-6B6729D11A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+    {25AA6A10-7BF0-41E3-AFD4-6B6729D11A58}.Release|Any CPU.Build.0 = Release|Any CPU
+    {E58CF497-FF5D-438B-9180-B51D5CF8204E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+    {E58CF497-FF5D-438B-9180-B51D5CF8204E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+    {E58CF497-FF5D-438B-9180-B51D5CF8204E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+    {E58CF497-FF5D-438B-9180-B51D5CF8204E}.Release|Any CPU.Build.0 = Release|Any CPU
+    {9F89E627-FD94-4BDD-8D09-8AC257F161C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+    {9F89E627-FD94-4BDD-8D09-8AC257F161C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+    {9F89E627-FD94-4BDD-8D09-8AC257F161C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+    {9F89E627-FD94-4BDD-8D09-8AC257F161C6}.Release|Any CPU.Build.0 = Release|Any CPU
+    {821F3499-D0B4-48A0-9ABF-3E1937FA5FA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+    {821F3499-D0B4-48A0-9ABF-3E1937FA5FA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+    {821F3499-D0B4-48A0-9ABF-3E1937FA5FA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+    {821F3499-D0B4-48A0-9ABF-3E1937FA5FA2}.Release|Any CPU.Build.0 = Release|Any CPU
+  EndGlobalSection
+EndGlobal
+
