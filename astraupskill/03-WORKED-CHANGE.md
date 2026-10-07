@@ -1,6 +1,6 @@
 # Worked change: classify the save race by state
 
-The baseline in [the original snapshot](snapshots/src/NetSlack.Application/Workspaces/WorkspaceService.cs) performed a slug precheck and then let every save exception escape. A tempting patch is `catch (DbUpdateException e) when (e.InnerException.Message.Contains("UNIQUE"))`, but that couples behavior to provider wording and mislabels a unique conflict from a different table. The staged implementation instead catches the save exception, queries the normalized slug with `AsNoTracking`, and converts the error only when that persisted row exists.
+The baseline in [the original snapshot](snapshots/src/NetSlack.Application/Workspaces/WorkspaceService.cs) performed a slug precheck and then let every save exception escape. A tempting patch is `catch (DbUpdateException e) when (e.InnerException.Message.Contains("UNIQUE"))`, but that couples behavior to provider wording and mislabels a unique conflict from a different table. The staged implementation (`WorkspaceService.cs:38-56`) instead catches the save exception, queries the normalized slug again, and converts the error only when that persisted row exists. The query is an ordinary EF Core `AnyAsync`, which always runs as SQL and never sees the request's own unsaved rows; the `AsNoTracking` call on line 48 is harmless but not what makes this true.
 
 Before:
 

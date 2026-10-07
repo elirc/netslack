@@ -13,4 +13,11 @@ A debugging trace can be summarized as follows:
 | post-query | not reached | present | absent |
 | public result | conflict | conflict | original error |
 
+Two test projects exist, and they prove different things:
+
+| Project | Cases | Database | Proves |
+|---|---|---|---|
+| `tests/NetSlack.ScopeHarness` (net10.0) | 5 runtime cases | none (`FakeDb`, `FakeSet<T>`) | the service's decision logic on each of the four paths |
+| `tests/NetSlack.Application.Tests` (net8.0) | 3 `[Fact]` | EF Core SQLite in-memory, real unique index | precheck conflict, ordinary create, channel authorization; **not** the recovery path |
+
 If a test says conflict for an outage, inspect whether the fake accidentally queries local pending entities. If success lacks the general channel, inspect additions before changing exception handling. Native .NET8 and provider execution remain separate checks documented in [VERIFICATION.md](VERIFICATION.md).
